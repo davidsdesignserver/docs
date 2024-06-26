@@ -1,0 +1,4231 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1A-onshapeFundamentals/">
+      
+      
+        <link rel="next" href="../1C-gearboxes/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>B: Design Methodology - FRCDesign.org</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-KX3MNPJ4L6"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-KX3MNPJ4L6",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-KX3MNPJ4L6",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1b-design-methodology" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="FRCDesign.org" class="md-header__button md-logo" aria-label="FRCDesign.org" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FRCDesign.org
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              B: Design Methodology
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="white"  aria-label="Switch to Light Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Light Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="black"  aria-label="Switch to Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidsdesignserver/dds-manual" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Design Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../design-challenge/" class="md-tabs__link">
+          
+  
+    
+  
+  Design Challenges
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../design-fundamentals/" class="md-tabs__link">
+          
+  
+    
+  
+  Design Fundamentals
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../best-practices/" class="md-tabs__link">
+          
+  
+    
+  
+  Best Practices
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../resources/" class="md-tabs__link">
+          
+  
+    
+  
+  Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../contribution/styleguide/" class="md-tabs__link">
+          
+  
+    
+  
+  Contributor's Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="FRCDesign.org" class="md-nav__button md-logo" aria-label="FRCDesign.org" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg>
+
+    </a>
+    FRCDesign.org
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidsdesignserver/dds-manual" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Design Guide
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Design Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Beginner Stages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Beginner Stages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage 0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Stage 0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage0/0A-introductionToCAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A: Introduction to CAD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage0/0B-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B: Onshape Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage0/0C-navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C: Navigating Onshape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage0/0D-theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    D: Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Stage 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1A-onshapeFundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A: Onshape Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    B: Design Methodology
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    B: Design Methodology
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master-sketch-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master Sketch Methodology
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swerve-drivebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swerve Drivebase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swerve Drivebase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drivetrain-master-sketches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drivetrain Master Sketches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deriving-layout-sketches-and-part-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deriving Layout Sketches and Part Modeling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assembly
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assembly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-more-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding More Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top-level-robot-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top Level Robot Assembly
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1C-gearboxes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C: Gearbox Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Stage 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage2/2A-drivebaseFullDetail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A: Full Detail Drivebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage2/2B-basicShooter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B: Basic Shooter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage2/2C-deadaxlePivot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C: Deadaxle Pivot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage2/2D-foamBallConveyer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    D: Foam Ball Conveyer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage2/2E-2022otbIntake/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    E: 2022 OTB Intake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage2/2F-2023pastaRollerIntake/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    F: 2023 Pasta Roller Intake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage2/2G-fourbarLinkage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    G: Four-bar Linkage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage2/2H-cascadeElevator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    H: Cascade Elevator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Stage 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage3/3A-multidoc%26MS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A: Multidoc & Mastersketching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage3/3B-973-2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B: 973 2020 Robot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage3/3C-973-2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C: 973 2023 Robot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intermediate Stage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../design-challenge/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Design Challenges
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Design Challenges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-challenge/challenges/week1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 1 | Swerve Drivebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-challenge/challenges/week2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Week 2 | Gearboxes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../design-fundamentals/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Design Fundamentals
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Design Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/structure/materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/structure/structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/structure/hardware/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Power Transmission
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Power Transmission
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/power-transmission/electronics-motors-sensors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electronics, Motors, and Sensors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/power-transmission/pneumatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pneumatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/power-transmission/rotation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transfer of Rotational Motion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/power-transmission/motion-components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motion Components
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/power-transmission/wheels-rollers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wheels and Rollers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/power-transmission/linear-extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Extension
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mechanisms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Mechanisms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/mechanisms/drivetrain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drivetrain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/mechanisms/elevators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elevators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design Write-ups
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design Write-ups
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/design-writeups/DFC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designing for Controllability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/design-writeups/chainTensioning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chain Tensioning Solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/design-writeups/bumperMounting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bumper Mounting Solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/design-writeups/springs-shocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Springs and Shocks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design-fundamentals/design-writeups/linkages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linkages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../best-practices/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Best Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../best-practices/document-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Document Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../best-practices/sub-document-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sub-Document Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../best-practices/mastersketch-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Master Sketch Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../best-practices/feature-tree-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Tree Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../best-practices/assembly-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assembly Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../resources/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/strategicDesignResources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Strategic Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../mechanism-examples/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Mechanism Examples
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Mechanism Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../mechanism-examples/intake/slapdown/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Slapdown Intakes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4_2" id="__nav_6_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Slapdown Intakes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/intake/slapdown/examples/4414style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4414 Style  Intake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/intake/slapdown/examples/washed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Washed Beavertail Intake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/intake/slapdown/examples/low/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low Pivot Slapdown Intake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/intake/slapdown/examples/6423otb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6423 Crescendo Slapdown Intake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../mechanism-examples/intake/4bar/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    4 Bar Intakes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4_3" id="__nav_6_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            4 Bar Intakes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/intake/4bar/examples/1678/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1678's 2022 Intake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/intake/4bar/examples/clean/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Andrew's Clean 4 Bar Intake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/intake/4bar/examples/vaughn4bar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vaughn's 4 Bar Intake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../mechanism-examples/elevator/cascade/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cascade Elevators
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4_4" id="__nav_6_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Cascade Elevators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/elevator/cascade/examples/2stage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Stage Cascade Elevator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/elevator/cascade/examples/3stage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Stage Cascade Elevator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../mechanism-examples/elevator/continuous/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Continuous Elevators
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4_5" id="__nav_6_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Continuous Elevators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/elevator/continuous/examples/cable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    External Cable Driven Elevator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/elevator/continuous/examples/belt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internal Belt Driven Elevator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../mechanism-examples/shooter/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Shooters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4_6" id="__nav_6_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Shooters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/shooter/examples/small/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Andrew's Hyper-Hive Shooter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/shooter/examples/citrus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1678 Citrus Shooter 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../mechanism-examples/drivebase/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Drivebases
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4_7" id="__nav_6_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Drivebases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/drivebase/examples/2910/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2910 Drivebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/drivebase/examples/brainpan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    972 Brainpan Drivebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../mechanism-examples/pivots/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Pivots
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4_8" id="__nav_6_4_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Pivots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/pivots/examples/6328pivot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6328 A-Frame Pivot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mechanism-examples/pivots/examples/2910pivot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2910 Dead Axle Pivot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CAD Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            CAD Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/featurescripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Featurescripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/simplified/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simplified Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/configurables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configurables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/krayonCAD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KrayonCAD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contributor's Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Contributor's Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribution/styleguide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Style Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribution/methodsOfContributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Methods of Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribution/contributors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<style>
+.right{
+    float:right;
+}
+.center{
+    text-align:center;
+}
+.left{
+    float:left;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+
+    display:none;
+}
+
+#slide1 {display:block}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 250px;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.25s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+
+<h1 id="1b-design-methodology">1B: Design Methodology</h1>
+<p><span class="left"><a href="../1A-onshapeFundamentals/">&lt; 1A: Onshape Fundamentals</a></span> <span class="right"><a href="../1C-gearboxes/">1C: Gearbox Projects &gt;</a></span>
+<br></p>
+<h2 id="project-overview">Project Overview</h2>
+<p>So far, you've worked on modeling FRC components in isolation. In Stage 1B, you'll dive right into robot design. In this project, you will be designing a swerve drivebase using <abbr title="Commercial Off the Shelf parts are anything you can buy from a vendor.">COTS</abbr> swerve modules. You will be introduced to a design workflow that will be applied to all future projects. Even if you've already CADed a drivetrain the past, this guide serves as an excellent introduction to the <strong>top-down master sketch</strong> design methodology.</p>
+<p>To begin, you'll be modeling a swerve drivebase. Then, you'll create a top level robot assembly and insert a pre modeled mechanism (1678's 2023 scoring mechanism).</p>
+<p><center><a class="glightbox" href="\img\design-guide\stage1b\FullAssy.png" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="\img\design-guide\stage1b\FullAssy.png" style="width:100%"></a></center>
+<center><em>Final robot assembly.</em></center></p>
+<p>As with previous exercises, the finished project is available for reference <a href="https://cad.onshape.com/documents/6c6044229091a87cf359270b/w/ed9648f0c04c639a2561615a/e/67a7ed0c6038787281325a51">here</a>. If you need help, please feel free to ask on the Discord!</p>
+<h2 id="master-sketch-methodology">Master Sketch Methodology</h2>
+<p>When designing a model in CAD, there are two high level strategies that can be employed: top-down and bottom-up. Top-down design employs high level, low detail sketches to dictate the design, and then refining details and components within that framework. Conversely, bottom-up design involves creating individual components or parts separately and then assembling them to form the final product. </p>
+<p>Top-down design offers a holistic approach, allowing for better system integration, consistency, and is more <abbr title="Designed in a way that uses relationships between steps to maintain design intent">parametric</abbr>. Bottom-up design offers flexibility and independence in designing individual parts. In FRC robot design, top-down approach is favored as system integration is often the most challenging aspect. Top-down ensures that the robot architecture dictates part design.</p>
+<p>To achieve this, a <strong><em>master sketch</em></strong> is utilized. A master sketch is a series of sketches that capture the major dimensions of each mechanism, field element interactions, and robot size constraints. Then, the master sketch(es) are inserted into each mechanism's part studio and the individual components are then modeled around the imported layout sketch. More information on master sketches can be found on the <a href="/best-practices/mastersketch-setup/">Master Sketch Best Practices</a> page.</p>
+<p><center><a class="glightbox" href="\img\design-guide\stage1b\exampleMasterSketch.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="\img\design-guide\stage1b\exampleMasterSketch.webp" style="width:60%"></a></center>
+<center><em>Example of robot master sketches. Each mechanism has a number of layout sketches that capture the important details.</em></center></p>
+<h2 id="swerve-drivebase">Swerve Drivebase</h2>
+<p>A drivebase is the mobile platform on which all our other mechanisms are designed around and attached to. With the advent of <abbr title="Commercial Off the Shelf parts are anything you can buy from a vendor.">COTS</abbr> swerve, designing a swerve drivebase has been made significantly easier and has become the most commonly used competitive drivetrain in FRC. </p>
+<p>A swerve drivebase is composed of four <em>swerve modules</em>. Each module has 2 motors: 1 for spinning the wheel and one for steering it. This enables the robot to translate in any direction independent of the rotation of the robot. There are many other <abbr title="Commercial Off the Shelf parts are anything you can buy from a vendor.">COTS</abbr> options available, each with their own advantages and tradeoffs. In this project, we'll be using <a href="https://www.swervedrivespecialties.com/products/mk4i-swerve-module">SDS MK4i modules</a>. You can learn more about drivetrains on the <a href="/design-fundamentals/mechanisms/drivebase/">Design Fundamentals</a> page.</p>
+<p><center><a class="glightbox" href="\img\design-guide\stage1b\SwerveBase\DriveAssy.png" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="\img\design-guide\stage1b\SwerveBase\DriveAssy.png" style="width:100%"></a></center>
+<center><em>Stage 1B swerve drivebase project.</em></center></p>
+<p>As was introduced in Stage 1A, robot structures are typically constructed out of aluminum box tubing. The drivebase is no exception to this. Most teams will opt to design their box tubing with a standard 0.5" spacing pattern of 0.196" diameter holes. This enables modularity and allows for easy integration of many <abbr title="Commercial Off the Shelf parts are anything you can buy from a vendor.">COTS</abbr> components like gussets.</p>
+<p>Box tubing extrusions can be purchased at most metal suppliers, but many FRC vendors including <a href="https://wcproducts.com/collections/systems-structure/products/punched-tubing"><abbr title="West Coast Products">WCP</abbr></a>, <a href="https://www.thethriftybot.com/products/thrifty-box-extrusion"><abbr title="The Thrifty Bot">TTB</abbr></a>, <a href="https://www.revrobotics.com/MAXTube/"><abbr title="REV Robotics">REV</abbr></a> sell box tubing with pre-cut hole patterns which can significantly reduce manufacturing time and equipment requirements.</p>
+<h3 id="drivetrain-master-sketches">Drivetrain Master Sketches</h3>
+<p>To begin, you will be creating a layout sketch of the drivetrain. This will dictate the size and position of the drive tubes. The layout will be drawn from the side and top view of the drivetrain. For your swerve drivebase, you will make it 26"x26".</p>
+<p>Start by creating a part studio called <code>Master Sketch</code>. Then, use the <code>Origin Cube</code> Featurescript to create an origin cube. <strong>You should start every part studio with an origin cube to set a reference for the origin of the robot.</strong> The origin of the robot is typically defined as the center of the drivebase on ground level. You can learn more about origins and the origin cube in <a href="/best-practices/assembly-setup#origin-cube-method">Assembly Best Practices</a>.</p>
+<p><center><strong>Drivetrain Layout Sketch Slides</strong></center></p>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div id="slide1" class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtFinalLayout.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtFinalLayout.webp" style="width:100%"></a>
+      <figcaption>0. The final layout sketch.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/originCube.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/originCube.webp" style="width:100%"></a>
+      <figcaption>1. Start by inserting the origin cube.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtSideLayout1.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtSideLayout1.webp" style="width:100%"></a>
+      <figcaption>2. Draw the side profile of the drivetrain on the Right Plane. We place the tube 1.75" from the ground, which is the offset from the ground to the bottom of the tube for the MK4i modules.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtSideLayout2.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtSideLayout2.webp" style="width:100%"></a>
+      <figcaption>3. Draw the wheel clearance box, which represents the area that the wheel takes up. For the MK4i modules, the box is 4.625" wide. The side layout of the drivebase is now finished.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtTopLayout1.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtTopLayout1.gif" style="width:100%"></a>
+      <figcaption>4. Create the top layout sketch by using the bottom mate connector on the vertical line of the side layout. Utilizing auto-generated mate connectors for sketch planes is a very useful tool to have. Press the “Top” button on the view cube to get a top view.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtTopLayout2.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtTopLayout2.gif" style="width:100%"></a>
+      <figcaption>5. Sketch the top outline of the drive base. Make the rectangle a square and set the side length equal to the length of the side layout tube. This ensures that the size of the top layout always matches the side layout, which makes the design parametric. Notice that the sketch is fully defined despite having no sketch dimensions.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtTopLayout3.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtTopLayout3.webp" style="width:100%"></a>
+      <figcaption>6. To sketch the tubes, draw a square 1" smaller than the previous square. This will represent the four 2"x1" tubes that make up the outer frame. Then, draw the top profile of the 2"x2" tube.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtTopLayout4.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtTopLayout4.webp" style="width:100%"></a>
+      <figcaption>7. Next, we need to make the cutouts on the drivetube for the swerve modules. Start by drawing two lines, each offset by 4.25" from the edge. This is the required offset for MK4i modules. Other modules will differ.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtTopLayout5.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtTopLayout5.gif" style="width:100%"></a>
+      <figcaption>8. To apply the cutout for all four tubes, we use the <code>Circular Pattern</code> sketch tool to copy the lines to all four corners. For a  <code>Circular Pattern</code> we first define the number of instances and then the axis of rotation.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtFinalLayout.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtFinalLayout.webp" style="width:100%"></a>
+      <figcaption>9. Finally, name your sketches and organize them into folders in the feature tree. Your sketches should all be fully defined.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1,0)" style="background-color: #000; color: #fff;">&#10094;</a>
+  <a class="next" onclick="plusSlides(1,0)" style="background-color: #000; color: #fff;">&#10095;</a>
+  <!-- The dots/circles -->
+  <div class="dotsContainer" style="text-align:center">
+    <!-- Dots will be generated here -->
+  </div>
+</div>
+
+<p>As previously explained, this method of top-down modeling is extremely powerful as it enables you to capture the most important dimensions all in one place. However, you should be careful to not over-detail master sketches. More information on master sketches can be found on the <a href="/best-practices/mastersketch-setup/">Master Sketch Best Practices</a> page.</p>
+<p>In this part, you were also introduced to the <code>Derived</code> feature. This feature is extremely powerful and can be used to import parts from one part studio into another to enable a references for modeling. However, you must be careful to not overuse this function as it can significantly slow down your part studios.</p>
+<h3 id="deriving-layout-sketches-and-part-modeling">Deriving Layout Sketches and Part Modeling</h3>
+<p>Now that you have created the layout sketch, you can begin modeling the individual parts. The critical dimensions of the parts, such as the length of the tubes, will be driven by the layout sketch. This way, the tubes will automatically update with any changes in the size of the drivebase in the layout sketch.</p>
+<p>Start by creating a new folder tab called <code>Drivetrain</code>. Then, create a new part studio called <code>Drivetrain</code> within the folder.</p>
+<p><center><strong>Drivetrain Part Modeling</strong></center></p>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div id="slide1" class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts0.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts0.webp" style="width:100%"></a>
+      <figcaption>0. The part studio.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts1.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts1.webp" style="width:100%"></a>
+      <figcaption>1. Start by inserting the origin cube. Then, use the <code>Derived</code> tool to insert the layout sketches you previously drew from the Master Sketch part studio. This feature will automatically update if changes are made to the layout sketch.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts2.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts2.webp" style="width:100%"></a>
+      <figcaption>2. Use the <code>Extrude Individual</code> and <code>Tube Converter</code> Featurescripts to model the tubes. The 2"x1" tubes should be 1/8" wall for strength, while the 2"x2" tube can be 1/16" wall.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts3.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts3.webp" style="width:100%"></a>
+      <figcaption>3. Start with one corner of the bellypan. The corner is cut out to create room for the swerve module. </figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts4.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts4.gif" style="width:100%"></a>
+      <figcaption>4. Use the <code>Fillet</code> sketch tool to add a 1" radius sketch fillet on the two internal corners of the cutout. </figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts5.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts5.gif" style="width:100%"></a>
+      <figcaption>5. Next, use the <code>Circular Pattern </code> sketch tool to pattern the other three corners. Extrude the bellypan to be 1/8" thick.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts6.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts6.webp" style="width:100%"></a>
+      <figcaption>6. Use the <code> Fillet All Edges</code> Featurescript to add a 0.25" radius fillet to the remaining edges on the bellypan by selecting the bottom face of the bellypan.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts7.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts7.webp" style="width:100%"></a>
+      <figcaption>7. Add the seed instances of the holes for the bellypan.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts8.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts8.gif" style="width:100%"></a>
+      <figcaption>8. Next, use the <code>Linear Pattern</code> sketch tool to pattern the holes along the edge.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts9.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts9.gif" style="width:100%"></a>
+      <figcaption>9. Use the <code>Circular Pattern</code> sketch tool to pattern the holes about the origin onto all four edges.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts10.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts10.gif" style="width:100%"></a>
+      <figcaption>10. Use the <code>Linear Pattern</code> sketch tool to pattern the holes for the 2"x2" tube.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts11.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts11.webp" style="width:100%"></a>
+      <figcaption>11. Clean up the sketch by moving the dimensions so that they are all visible. A clean sketch is important for readability of the CAD so that it is easily editable in the future.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtParts0.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtParts0.webp" style="width:100%"></a>
+      <figcaption>12. Finally, name your sketches and organize them into a folder in the feature tree. Additionally, set the material of the bellypan to Aluminum 6061 and name your parts.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1,1)" style="background-color: #000; color: #fff;">&#10094;</a>
+  <a class="next" onclick="plusSlides(1,1)" style="background-color: #000; color: #fff;">&#10095;</a>
+  <!-- The dots/circles -->
+  <div class="dotsContainer" style="text-align:center">
+    <!-- Dots will be generated here -->
+  </div>
+</div>
+
+<p>At this point, you should be feeling more and more comfortable with Onshape modeling and using Featurescripts. Always make sure to clean up your feature tree while working to keep it organized and easy to use. You can learn about feature tree organization on the <a href="/best-practices/feature-tree-setup/">Feature Tree Best Practices</a> page.</p>
+<h3 id="assembly">Assembly</h3>
+<p>Now that the part studio is finished, you can create the drivetrain assembly. Create a new assembly tab called <code>Drivetrain Assembly</code> in the <code>Drivetrain</code> folder you made previously. </p>
+<p>Previously, in Stage 1A when you created assemblies one of the parts in the group mate was fixed in place. However, this is not considered a good practice as it is not <abbr title="Designed in a way that uses relationships between steps to maintain design intent">parametric</abbr>. This is where the origin cube comes in: the origin cube has a mate connector placed at the origin of the part studio. After inserting and grouping all of the parts, you can fasten the origin cube to the origin of the assembly. This aligns the part studio origin and assembly origin.</p>
+<p><center><strong>Drivetrain Assembly</strong></center></p>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div id="slide1" class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAssy0.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAssy0.webp" style="width:100%"></a>
+      <figcaption>0. The assembly.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAssy1.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAssy1.gif" style="width:100%"></a>
+      <figcaption>1. Insert the parts into the assembly, <code>Group</code> them, then fasten the origin cube to the origin of the assembly.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <video width="1920" controls>
+        <source src="/img/design-guide/stage1b/SwerveBase/dtAssy2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>2. Insert the MK4i module from the MKCad app into the assembly and mate it into place. </figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAssy3.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAssy3.gif" style="width:100%"></a>
+      <figcaption>3. Use the <code>Circular Pattern</code> assembly tool to finish assembling the modules. </figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <video width="1920" controls>
+        <source src="/img/design-guide/stage1b/SwerveBase/dtAssy4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>4. Insert a 3/16" rivet from the MKCad app into the assembly and mate it. </figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAssy5.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAssy5.gif" style="width:100%"></a>
+      <figcaption>5. Use the <code>Replicate </code> assembly tool to replicate the rivet and rivet mate onto all matching geometry on the bottom face of the bellypan</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAssy0.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAssy0.webp" style="width:100%"></a>
+      <figcaption>6. The assembly.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1,2)" style="background-color: #000; color: #fff;">&#10094;</a>
+  <a class="next" onclick="plusSlides(1,2)" style="background-color: #000; color: #fff;">&#10095;</a>
+  <!-- The dots/circles -->
+  <div class="dotsContainer" style="text-align:center">
+    <!-- Dots will be generated here -->
+  </div>
+</div>
+
+<p>The <code>Replicate</code> tool, which was introduced in Stage 1B exercise 5, is a very powerful tool for duplicating parts in assemblies. <code>Replicate</code> works by creating a copy of the selected parts, and duplicates the selected mate onto the selected geometry. Note that the selected geometry must exactly match the origin mate geometry, eg: the hole diameter must be the same for replicate to copy a rivet. In your assembly, you use the select the face for replicate to apply to. What this does is identify all geometry that matches the original mate and then copy the selected components and mate to those matching locations on the selected face. If you want to replicate onto only specific holes, you can change the drop-down menu to "Match Individual Edges".</p>
+<details>
+<summary>Match Individual Edges for Replicate</summary>
+<center>
+  <video width="1920" controls>
+    <source src="/img/design-guide/stage1b/replicateExample.mp4" type="video/mp4">
+  </video>
+</center>
+<center> Using "Match Individual Edges" allows us to select specific holes to replicate to instead of every hole on the face of the gusset. </center>
+</details>
+
+<h4 id="adding-more-components">Adding More Components</h4>
+<p>When you model more parts in the part studio, you can insert them into the assembly in a similar to fashion to before. Hit insert and immediately click on the green checkmark. Then, edit the initial <code>Group</code> you made and add the part to the group. By doing this, you ensure that added parts will always stay in the same place it was modeled in the part studio.</p>
+<p>Let's add a <abbr title="Reinforcement plate, usually made of aluminum, used to strengthen connections between two tubes.">gusset</abbr> to connect the 2"x2" tube to the 2"x1" tube.</p>
+<p><center><strong>Adding a <abbr title="Reinforcement plate, usually made of aluminum, used to strengthen connections between two tubes.">Gusset</abbr></strong></center></p>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div id="slide1" class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAdd0.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAdd0.webp" style="width:100%"></a>
+      <figcaption>0. Finished drivetrain assembly.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAdd1.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAdd1.webp" style="width:100%"></a>
+      <figcaption>1. Add the gusset for the crosstube with the <code>Gusset</code> Featurescript.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAdd2.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAdd2.gif" style="width:100%"></a>
+      <figcaption>2. Insert the gusset into the assembly and add it to the <code>Group</code>.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAdd3.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAdd3.webp" style="width:100%"></a>
+      <figcaption>3. Copy the gusset and mate it to the other side. </figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAdd4.gif" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAdd4.gif" style="width:100%"></a>
+      <figcaption>4. Edit the replicate feature to add rivets to the gusset. </figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/SwerveBase/dtAdd0.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/SwerveBase/dtAdd0.webp" style="width:100%"></a>
+      <figcaption>4. Finished drivetrain assembly.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1,3)" style="background-color: #000; color: #fff;">&#10094;</a>
+  <a class="next" onclick="plusSlides(1,3)" style="background-color: #000; color: #fff;">&#10095;</a>
+  <!-- The dots/circles -->
+  <div class="dotsContainer" style="text-align:center">
+    <!-- Dots will be generated here -->
+  </div>
+</div>
+
+<p>Make sure you sort the instances in your assembly into folders (i.e. frame, swerve modules) and name any patterns and replicates used. This will help you locate components in the assembly later down the line.</p>
+<p>More details about best practices for Onshape assemblies are included on the <a href="/best-practices/assembly-setup/">Assembly Best Practices Page</a>.</p>
+<p>It should be noted that while modeling every detail of the robot hardware (bolts, rivets, nuts) is beneficial for purchasing and real life assembly purposes, it isn't strictly necessary. Time is a precious resource, especially during build season, so you should spend it on what will give you the biggest return.</p>
+<h2 id="top-level-robot-assembly">Top Level Robot Assembly</h2>
+<p>Now that you have a drivebase, you can create a <em>top level robot assembly</em>. The top level robot assembly is the highest in the <a href="/best-practices/document-setup/">assembly hierarchy</a>. Organizing the assemblies in this way keeps thing organized from both a CAD assembly and real life assembly standpoint. </p>
+<p>Create an assembly tab above the <code>Master Sketch</code> part studio and name it <code>Top Level Robot Assembly</code>. Here, you will bring in the drivebase and the scoring mechanism from <a href="https://www.thebluealliance.com/team/1678/2023">1678's 2023 robot</a>.</p>
+<p>Copy <a href="https://cad.onshape.com/documents/28a750426de8e2bc17d5b900/w/8e79c6217ae2ce07ff57d900/e/a4d266d03289620078d13a80">this link</a> to access the scoring mechanism.</p>
+<p><center><strong>Top Level Robot Assembly</strong></center></p>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div id="slide1" class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/TopLevel/topL0.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/TopLevel/topL0.webp" style="width:100%"></a>
+      <figcaption>0. Finished top level robot assembly.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <video width="1920" controls>
+        <source src="/img/design-guide/stage1b/TopLevel/topL1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>1. Insert the drivetrain assembly and fasten the origin cube to the assembly origin. You may need to unhide the origin cube to mate it.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <video width="1920" controls>
+        <source src="/img/design-guide/stage1b/TopLevel/topL2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>2. Insert the 1678 2023 scoring assembly by pasting the scoring mechanism link into the `Insert` menu textbox. Then, fasten its origin cube to the assembly origin. You may need to hide the drivetrain's origin cube to access the origin of the assembly for mating.</figcaption>
+    </figure>
+  </div>
+
+  <div class="mySlides fade">
+    <figure>
+      <a class="glightbox" href="/img/design-guide/stage1b/TopLevel/topL0.webp" data-type="image" data-width="90%" data-height="auto" data-desc-position="bottom"><img src="/img/design-guide/stage1b/TopLevel/topL0.webp" style="width:100%"></a>
+      <figcaption>3. Finished top level assembly. </figcaption>
+    </figure>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1,4)" style="background-color: #000; color: #fff;">&#10094;</a>
+  <a class="next" onclick="plusSlides(1,4)" style="background-color: #000; color: #fff;">&#10095;</a>
+  <!-- The dots/circles -->
+  <div class="dotsContainer" style="text-align:center">
+    <!-- Dots will be generated here -->
+  </div>
+</div>
+
+<p>And that's all there is to the top level robot assembly! The use of the origin cube makes it very easy to mate together. In later stages you will explore how to create flexible assemblies (arms, elevators, etc) with the origin cube. If you are interested, you can get a sneak peek <a href="/best-practices/assembly-setup/#utilizing-origin-cube-for-flexible-assemblies">here</a>.</p>
+<p>Congratulations on completing Stage 1B! Remember, practice is essential – the more CAD models you create, the more proficient and efficient you'll become. Using keyboard shortcuts can significantly accelerate your CAD workflow. Be attentive to best practices to avoid developing any bad habits. Keep up the good work!</p>
+<p>At this point, you've learned and had some practice on modeling individual components and creating a top-down design. Starting in Stage 1C, we'll introduce some mechanical design topics including power transmission. This is the final step before being able to design a full mechanism!</p>
+<p><br>
+<center>1B: Design Methodology</center> 
+<span class="left"><a href="../1A-onshapeFundamentals/">&lt; 1A: Onshape Fundamentals</a></span> <span class="right"><a href="../1C-gearboxes/">1C: Gearbox Projects &gt;</a></span>
+<br>
+<br></p>
+<!-- ------------------DO NOT TOUCH ANYTHING BELOW HERE------------------ -->
+
+<script>
+
+// Initialize slide index for each slideshow
+
+let slideIndices = [0];
+
+let slideshows = document.getElementsByClassName("slideshow-container");
+  for (let no = 0; no < slideshows.length; no++) {
+    slideIndices[no] = 1;
+    let dotsContainer = slideshows[no].getElementsByClassName("dotsContainer")[0];
+    let slides = slideshows[no].getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      let dot = document.createElement("span");
+      dot.className = "dot";
+      dot.onclick = function() { currentSlide(i+1, no); };
+      dotsContainer.appendChild(dot);
+    }
+    showSlides(1, no);
+  }
+
+  currentSlide(1);
+
+// Next/previous controls
+function plusSlides(n, no) {
+  showSlides(slideIndices[no] += n, no);
+}
+
+// Thumbnail image controls
+function currentSlide(n, no) {
+  showSlides(slideIndices[no] = n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName("slideshow-container")[no].getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("slideshow-container")[no].getElementsByClassName("dot");
+  if (n > x.length) {slideIndices[no] = 1}    
+  if (n < 1) {slideIndices[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  x[slideIndices[no]-1].style.display = "block";  
+  dots[slideIndices[no]-1].className += " active";
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/jHXTdNjYCg" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "navigation.top", "navigation.indexes", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

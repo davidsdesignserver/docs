@@ -1,0 +1,56 @@
+[data-md-color-scheme="slate"] .md-content a:hover{
+    color:white;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar a:hover{
+    color:white !important;
+}
+
+[data-md-color-scheme="default"] .md-content a:hover{
+  color:black;
+}
+
+[data-md-color-scheme="default"] .md-sidebar a:hover{
+  color:rgb(76, 174, 79) !important;
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip,
+.md-typeset .admonition.note,
+.md-typeset details.note
+{
+  border-color: rgb(76, 174, 79);
+}
+.md-typeset .tip> .admonition-title,
+.md-typeset .tip> summary {
+  background-color: rgba(43, 155, 70, 0.1);
+}
+.md-typeset .note> .admonition-title,
+.md-typeset .note> summary {
+  background-color: rgba(43, 155, 70, 0.1);
+}
+
+.md-typeset .tip > .admonition-title::before,
+.md-typeset .tip > summary::before {
+  background-color: rgb(76, 174, 79);
+}
+
+.md-typeset .note > .admonition-title::before,
+.md-typeset .note > summary::before {
+  background-color: rgb(76, 174, 79);
+}
+
+abbr {
+  border-bottom-style: solid !important;
+  border-bottom-color: rgb(76, 174, 79) !important;
+  border-bottom-width: 0.075rem !important;
+  cursor: help;
+}
+
+:root {
+--md-accent-fg-color: rgb(76, 174, 79) !important; 
+}
+
+.md-typeset .md-button--primary {
+  margin-top: 0.5rem;
+}
